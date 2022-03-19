@@ -35,11 +35,16 @@ do
 			rm $i
 			mv $(basename $i).tar.gz $SMIETNIK
 		fi
+		if ( file $i | grep -q compressed ); then
+			mv $i $SMIETNIK
+		fi
 	fi
 
 done
 
 #usuwanie plikow starszych niz Xh
-HOURS=24
+DAYS=1
+MINUTES=10
 
-
+#find ./$(basename $SMIETNIK) -mmin +$(basename $MINUTES) -type f -delete #files older than MINUTES min
+find ./$(basename $SMIETNIK) -mtime +$(basename $DAYS) -type f -delete #files older than DAYS days
