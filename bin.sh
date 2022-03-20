@@ -1,9 +1,5 @@
 #!/bin/bash
 
-#pliki podane w argumentach trzeba kompresowac (jesli juz nie sa) i przenosic do katalogu smietnika
-#przy kazdym wywolaniu usuwac pliki ktore sa starsze niz 24h
-#umozliwic usuwanie plikow i folderow
-
 #miejsce ze smietnikiem
 SMIETNIK="/home/zuzanka/Desktop/shellscripts/smietnik1"
 echo "Folder smietnik to: $SMIETNIK"
